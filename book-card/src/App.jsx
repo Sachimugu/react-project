@@ -6,15 +6,13 @@ function App() {
   return (
     <>
       <h1 className="text-4xl font-bold text-center p-4">Book Card Project</h1>
-      <div className="md:flex gap-5">
-
+      <div className=" grid md:grid-cols-3 md:gap-4 lg:grid-cols-4">
       <Book></Book>
       <Book></Book>
       <Book></Book>
       <Book></Book>
       <Book></Book>
       <Book></Book>
-
       </div>
     </>
   );
@@ -30,8 +28,10 @@ const Book = () => {
         width={220}
         height={250}
       ></img>
-      <h3 className="text-lg">The Monishier Daughters</h3>
-      <p className="text-sm text-green-400">200$</p>
+      <h3 className="text-lg text-center">
+        The Monishier Daughters The Monishier Daughters The Monishier Daughters
+      </h3>
+      <p className="text-sm text-green-800">200$</p>
     </div>
   );
 };
