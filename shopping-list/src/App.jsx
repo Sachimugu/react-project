@@ -17,6 +17,11 @@ const App = () => {
   
   return (
     <div className="max-w-5xl  m-auto py-4">
+      <div className="grid  font-bold text-white place-items-center  grid-cols-3 p-4 bg-gray-600 my-4 rounded-md">
+        <h1>Item</h1>
+        <h1>Price</h1>
+        <h1>Delete</h1>
+      </div>
       {data.map((item) => {
         return (
           <ItemCard
