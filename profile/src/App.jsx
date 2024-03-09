@@ -5,10 +5,8 @@ const App = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [search, setSearch] = useState('');
-  const refContainer = useRef(null)
-
-
+  const [search, setSearch] = useState("");
+  const refContainer = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,21 +40,23 @@ const App = () => {
 
     fetchData();
     // refContainer.current.focus();
-
   }, []);
 
   console.log(data);
   if (loading) {
     return (
-      <div className="max-w-5xl m-auto">
-        <p1>loading</p1>
+      <div className="max-w-3xl m-auto text-center">
+        <p1 className="text-center text-6xl">Loading . . .</p1>
       </div>
     );
   }
   if (error) {
     return (
-      <div className="max-w-5xl m-auto text-red-300">
-        <p1 className="text-center"> Error Finding User</p1>
+      <div className="max-w-3xl m-auto text-red-800 text-center">
+        <p1 className="text-center text-5xl">
+          {" "}
+          Error Finding User <span className="text-green-800">'{search}'</span>
+        </p1>
       </div>
     );
   }
@@ -65,7 +65,10 @@ const App = () => {
     <>
       <div className="max-w-3xl m-auto mt-16 ">
         <div>
-          <form onSubmit={handleSubmit} className="flex items-center justify-center mb-4">
+          <form
+            onSubmit={handleSubmit}
+            className="flex items-center justify-center mb-4"
+          >
             <input
               ref={refContainer}
               className="p-1 border-2 border-blue-500 rounded-l-md w-2/3 text-center"
