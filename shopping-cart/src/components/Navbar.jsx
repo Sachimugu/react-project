@@ -10,7 +10,7 @@ const Navbar = () => {
   console.log(amount);
 
   return (
-    <nav>
+    <nav className="z-2">
       <div className="nav-center">
         <h3>redux tooolkit</h3>
         <div className="nav-container">
